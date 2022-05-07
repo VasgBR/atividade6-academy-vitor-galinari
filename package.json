@@ -1,0 +1,26 @@
+{
+  "name": "atividade-6-academy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VasgBR/atividade6-academy-vitor-galinari.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VasgBR/atividade6-academy-vitor-galinari/issues"
+  },
+  "homepage": "https://github.com/VasgBR/atividade6-academy-vitor-galinari#readme",
+  "dependencies": {
+    "cypress": "^9.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/steps"
+}
+}
