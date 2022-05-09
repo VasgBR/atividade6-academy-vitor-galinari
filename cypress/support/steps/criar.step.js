@@ -5,7 +5,7 @@ Given("acesso a tela principal", () => {
     listarPage.telaPrincipal();
 })
 
-Given("clico na opção novo", () => {
+Given("acesso a página de cadastrar através da opção Novo", () => {
     listarPage.novo();
 })
 
@@ -21,7 +21,7 @@ When("informo um email válido", (tabela) => {
 
 When("informo um nome inválido", (tabela) => {
     var dadosTabela = tabela.rowsHash();
-    criarPage.atribuirNome(dadosTabela.email);
+    criarPage.atribuirNome(dadosTabela.nome);
 })
 
 When("informo um email inválido", (tabela) => {
@@ -39,7 +39,7 @@ When("cadastro um usuário com sucesso", (tabela) => {
     criarPage.preencherFormularioESalvar(dadosTabela.nome, dadosTabela.email);
 })
 
-When("clico em salvar", () => {
+When("confirmo o formulário através do botão Salvar", () => {
     criarPage.salvar();
 })
 

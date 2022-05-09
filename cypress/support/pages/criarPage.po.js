@@ -26,7 +26,7 @@ class CriarPage{
         cy.contains(mensagem).should("be.visible");
     }
 
-    mensagemDeErro() {
+    mensagemDeErro(mensagem) {
         cy.contains(mensagem).should("be.visible");
     }
 
@@ -34,6 +34,7 @@ class CriarPage{
         this.atribuirNome(nome);
         this.atribuirEmail(email);
         this.salvar();
+        cy.wait(2000);
     }
 
     telaPrincipal() {
