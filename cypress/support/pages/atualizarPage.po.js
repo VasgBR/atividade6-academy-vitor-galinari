@@ -6,6 +6,14 @@ class AtualizarPage{
         cy.contains("button", "Editar").click();
     }
 
+    vizualizarEditar() {
+        cy.contains("button", "Editar").should("be.visible");
+    }
+
+    cancelar() {
+        cy.contains("button", "Cancelar").click();
+    }
+
     apagarNome() {
         cy.get(this.inputNome).clear();
     }
@@ -20,6 +28,17 @@ class AtualizarPage{
 
     atualizarEmail(email) {
         cy.get(this.inputEmail).type(email);
+    }
+
+    atualizarEmailDeOutroUsuario(emailDeOutroUsuario) {
+        cy.get(this.inputEmail).type(emailDeOutroUsuario)
+    }
+
+    usuariosCadastrados() {
+        cy.intercept("GET", "https://crud-api-academy.herokuapp.com/api/v1/users", {
+        statusCode: 200,
+        fixture: "lista.json"
+    });
     }
 
 }

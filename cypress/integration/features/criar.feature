@@ -6,7 +6,7 @@ Feature: Criar usuário
     Background: Acessar a tela de cadastrar
         Given acesso a tela principal
         And acesso a página de cadastrar através da opção Novo
-        @ignore
+        #@ignore
         Scenario: Registra um novo usuário
             When informo um nome válido
             | nome | Vitor Galinari |
@@ -15,11 +15,12 @@ Feature: Criar usuário
             And confirmo o formulário através do botão Salvar
             Then visualizo a mensagem de sucesso
             | mensagem | Usuário salvo com sucesso! |
-        @ignore
+        #@ignore
         Scenario: Registrar um novo usuário com email já existente
-            When cadastro um usuário com sucesso
+            When tenho um usuário cadastrado
             | nome  | Vitor Galinari     |
             | email | vitor@galinari.com |
+            And confirmo o formulário através do botão Salvar
             And informo um nome válido
             | nome | GalinariVitor |
             And informo um email já existente
@@ -73,7 +74,7 @@ Feature: Criar usuário
             And informo um email válido
             | email | vitor@galinari.com |
             And confirmo o formulário através do botão Salvar
-            Then visualizo a mensagem de sucesso
+            Then visualizo a mensagem de erro
             | mensagem | Informe no máximo 100 caracteres para o nome |
         #@ignore
         Scenario: Registrar um usuário com mais de 60 caracteres no email
@@ -82,7 +83,7 @@ Feature: Criar usuário
             And informo um email inválido
             | email | vitorvitorvitorvitorvitor@galinarigalinarigalinarigalinar.com |
             And confirmo o formulário através do botão Salvar
-            Then visualizo a mensagem de sucesso
+            Then visualizo a mensagem de erro
             | mensagem | Informe no máximo 60 caracteres para o e-mail |
         #@ignore
         Scenario: Registrar um usuário com menos de 4 caracteres no nome

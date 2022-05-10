@@ -17,6 +17,16 @@ When("informo um nome válido", (tabela) => {
 When("informo um email válido", (tabela) => {
     var dadosTabela = tabela.rowsHash();
     criarPage.atribuirEmail(dadosTabela.email);
+    cy.intercept("POST", "https://crud-api-academy.herokuapp.com/api/v1/users", {
+        statusCode: 201,
+        body: [{
+            "id": "0910f812-5fc2-4df6-b124-157af3b9e146",
+            "name": dadosTabela.nome,
+            "email": dadosTabela.email,
+            "createdAt": "2022-05-09T23:54:53.901Z",
+            "updatedAt": "2022-05-09T23:54:53.901Z"
+        }]
+    });
 })
 
 When("informo um nome inválido", (tabela) => {
@@ -32,11 +42,31 @@ When("informo um email inválido", (tabela) => {
 When("informo um email já existente", (tabela) => {
     var dadosTabela = tabela.rowsHash();
     criarPage.atribuirEmail(dadosTabela.email);
+    cy.intercept("POST", "https://crud-api-academy.herokuapp.com/api/v1/users", {
+        statusCode: 422,
+        body: [{
+            "id": "0910f812-5fc2-4df6-b124-157af3b9e664",
+            "name": dadosTabela.nome,
+            "email": dadosTabela.email,
+            "createdAt": "2022-05-09T23:54:53.901Z",
+            "updatedAt": "2022-05-09T23:54:53.901Z"
+        }]
+    });
 })
 
-When("cadastro um usuário com sucesso", (tabela) => {
+When("tenho um usuário cadastrado", (tabela) => {
     var dadosTabela = tabela.rowsHash();
-    criarPage.preencherFormularioESalvar(dadosTabela.nome, dadosTabela.email);
+    criarPage.preencherFormulario(dadosTabela.nome, dadosTabela.email);
+    cy.intercept("POST", "https://crud-api-academy.herokuapp.com/api/v1/users", {
+        statusCode: 201,
+        body: [{
+            "id": "0910f812-5fc2-4df6-b124-157af3b9e146",
+            "name": dadosTabela.nome,
+            "email": dadosTabela.email,
+            "createdAt": "2022-05-09T23:54:53.901Z",
+            "updatedAt": "2022-05-09T23:54:53.901Z"
+        }]
+    });
 })
 
 When("confirmo o formulário através do botão Salvar", () => {

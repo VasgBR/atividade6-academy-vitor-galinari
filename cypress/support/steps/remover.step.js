@@ -1,7 +1,8 @@
-import { listarPage } from "../pages/listarPage.po"
-import { atualizarPage } from "../pages/atualizarPage.po"
-import { criarPage } from "../pages/criarPage.po"
 import { removerPage } from "../pages/removerPage.po"
+
+Given("acesso a tela principal para excluir um usuário", () => {
+    removerPage.tela();
+})
 
 When("eu seleciono o ícone da lixeira", () => {
     removerPage.lixeira();

@@ -1,0 +1,46 @@
+[
+  {"id":"47e7ebaa-ad55-4ba6-94d0-264ac4a09c99",
+    "name":"Pao Com Salame",
+    "email":"paocomsalame@email.com",
+    "createdAt":"2022-05-10T19:46:49.891Z",
+    "updatedAt":"2022-05-10T19:48:47.349Z"
+  },
+  {"id":"639d54ce-2468-4570-97d5-5f9fb52dc43a",
+    "name":"Kiko",
+    "email":"k@g.com",
+    "createdAt":"2022-05-10T19:51:55.940Z",
+    "updatedAt":"2022-05-10T19:51:55.940Z"
+  },
+  {
+    "id":"38c44909-2bbd-4df7-a9b1-d5e039975dfc",
+    "name":"Goku",
+    "email":"goku@g.com",
+    "createdAt":"2022-05-10T20:10:51.698Z",
+    "updatedAt":"2022-05-10T20:10:51.698Z"
+  },
+  {"id":"1b6a1ca5-9499-4bb3-985b-f9fe00d13642",
+    "name":"Name Surname",
+    "email":"user@example.com",
+    "createdAt":"2022-05-10T20:13:55.001Z",
+    "updatedAt":"2022-05-10T20:13:55.001Z"
+  },
+  {"id":"316fd277-5791-49fd-bc5b-c9d252087b64",
+    "name":"Chiquinha de Jesus Santos",
+    "email":"chi@hotmail.com",
+    "createdAt":"2022-05-10T20:14:28.626Z",
+    "updatedAt":"2022-05-10T20:15:16.647Z"
+  },
+  {"id":"e65b6605-9e0a-44fc-bcfd-40e0c24b6bdc",
+    "name":"Vitor Galinari",
+    "email":"vitor@galinari.com",
+    "createdAt":"2022-05-10T20:21:18.856Z",
+    "updatedAt":"2022-05-10T20:21:18.856Z"
+  },
+  {"id":"6ca7411b-aeac-4ca5-b10e-c768b5038b52",
+    "name":"Galinari Vitor",
+    "email":"galinari@vitor.com",
+    "createdAt":"2022-05-10T20:21:38.706Z",
+    "updatedAt":"2022-05-10T20:21:38.706Z"
+  }
+]
+

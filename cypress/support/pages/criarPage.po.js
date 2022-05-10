@@ -30,11 +30,9 @@ class CriarPage{
         cy.contains(mensagem).should("be.visible");
     }
 
-    preencherFormularioESalvar(nome, email) {
+    preencherFormulario(nome, email) {
         this.atribuirNome(nome);
         this.atribuirEmail(email);
-        this.salvar();
-        cy.wait(2000);
     }
 
     telaPrincipal() {
