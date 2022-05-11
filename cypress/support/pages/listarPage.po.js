@@ -9,6 +9,15 @@ class ListarPage{
     }
 
     verDetalhes() {
+        cy.intercept("GET", "https://crud-api-academy.herokuapp.com/api/v1/users/47e7ebaa-ad55-4ba6-94d0-264ac4a09c99", {
+        statusCode: 200,
+        body: { id:"47e7ebaa-ad55-4ba6-94d0-264ac4a09c99",
+                name:"Pao Com Salame",
+                email:"paocomsalame@email.com",
+                createdAt:"2022-05-10T19:46:49.891Z",
+                updatedAt:"2022-05-10T19:48:47.349Z"
+      }
+    });
         cy.contains("a", "Ver detalhes").click();
     }
 
